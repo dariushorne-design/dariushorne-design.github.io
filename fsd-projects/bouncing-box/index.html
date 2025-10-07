@@ -45,8 +45,8 @@
 
         // update the boardWidth variable when the window is resized
         jQuery(window).on("resize", function () {
-          boardWidth = board.width();
-        });
+          boardWidth = board.width();{positionX += 10;}
+        );
 
         // Every 50 milliseconds, call the update Function (see below)
         setInterval(update, 50);
@@ -69,6 +69,7 @@
         //////////////////////////////////////////////////////////////////
 
         // TODO 2 - Variable declarations
+        var positionX = 0;
 
 
 
@@ -79,7 +80,7 @@
          * Each time it is called, it should move the Box to a new location.
          * If the box drifts off the screen, turn it around!
          */
-        function update() {
+        moveBoxTo(positionX); {
 
         
 
@@ -93,7 +94,7 @@
          * - increase the speed
          * - move the box to the left side of the screen.
          */
-        function handleBoxClick() {
+        function handleBoxClick(positionXe) {
 
 
 
